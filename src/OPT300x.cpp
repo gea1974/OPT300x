@@ -114,9 +114,9 @@ OPT300x_S OPT300x::readRegister(OPT300x_Commands command) {
       myResult.error = error;
     }
     switch (command) {
-      case RESULT : result = myResult.lux;
-      case HIGH_LIMIT : highLimit = myResult.lux;
-      case LOW_LIMIT : lowLimit = myResult.lux;
+      case RESULT : result = myResult.lux; break;
+      case HIGH_LIMIT : highLimit = myResult.lux; break;
+      case LOW_LIMIT : lowLimit = myResult.lux; break;
     }
     return myResult;
   } else {
