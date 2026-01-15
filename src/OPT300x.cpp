@@ -167,7 +167,7 @@ float OPT300x::convert_er2float(OPT300x_ER input) {
 
 OPT300x_ER OPT300x::convert_float2er(float input) {
     uint8_t exponent = 0;
-    uint16_t fractional = input / 0.01;
+    uint32_t fractional = input / 0.01;
     while (fractional >= (1 << 12) and exponent < (1 << 4)) {
         fractional /= 2;
         exponent++;
